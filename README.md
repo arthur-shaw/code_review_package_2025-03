@@ -69,6 +69,7 @@ I expect a few issues to arise:
 # Questions for review
 
 - How can I check the project has been opened as a project?
+- How can I trigger `renv` to do its thing even if the user hasn't opened the project in the "right way" that automatically run `renv`'s activation script.
 - How can I run system diagnostics before renv attempts to install dependencies (e.g. check that RTools/build tools installed before `renv` attempts to install a package like dplyr that requires compilation)?
 - How can I suppress `renv`'s verbose output when it is more distracting (for non-R users) than useful?
 - Are there other system dependencies I should check for, and if so how?
