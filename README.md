@@ -73,3 +73,22 @@ I expect a few issues to arise:
 - How can I run system diagnostics before renv attempts to install dependencies (e.g. check that RTools/build tools installed before `renv` attempts to install a package like dplyr that requires compilation)?
 - How can I suppress `renv`'s verbose output when it is more distracting (for non-R users) than useful?
 - Are there other system dependencies I should check for, and if so how?
+
+# Where to find what the project is already doing
+
+Here's where you can find where I'm already making some efforts to make the project work on someone else's machine or fail informatively.
+
+### Provision packages dependencies with `renv`
+
+- `/renv` that contains some renv-provisioned scripts and will contain the project-specific library.
+- `.RProfile` that points to the `renv` activation script.
+- `renv.lockfile` that captures the snapshotted package dependencies.
+
+### Check for system requirements
+
+To work, the project needs:
+
+- **Compilation tools.** For Windows users (my user base), that's RTools.
+- **Publication tools.** For this project, that's Quarto. (Writing this, I'm realizing that I should probably check for Pandoc too, since it's likely necessary for Quarto.)
+
+[This script](https://github.com/ehcvm3/nsu_sgd/blob/main/R/01_confirmer_outils_systeme.R), sourced by all numbered scripts in the root of the project, checks for RTools and Quarto.
