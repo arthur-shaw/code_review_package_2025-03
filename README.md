@@ -66,7 +66,7 @@ I expect a few issues to arise:
 1. Users will not open the project as an R project, but instead directly attempt to run numbered scripts in the root of the project.
 1. `renv` will fail to install dependencies, and the root cause will not be clear, requiring further manual investigation and remediation (e.g., user doesn't have RTools, has wrong version of R, etc.)
 
-# Questions for review
+# Proposed scope of review
 
 - How can I check the project has been opened as a project?
 - How can I trigger `renv` to do its thing even if the user hasn't opened the project in the "right way" that automatically run `renv`'s activation script.
